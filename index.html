@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="styles/general.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+</head>
+<body>
+    <img id="mtvLogo" src="styles/images/mtvlogo.png">
+    <div class="headers" style="position:inherit;">MTV Challenge Submissions!</div>
+    <div class="nav">
+        <div><a href="#about">About</a></div>
+        <div><a href="#mtvChallenge">Challenge</a></div>
+        <div><a href="#submit">Submit</a></div>
+        <div><a href="#extra">Extra</a></div>
+        <label class="switch"><input type="checkbox" onclick="switchmode()" /><span class="slider"></span></label>
+        </div>
+    <div class="participants">
+      Thank you for Participating!
+      <div class="mySlides">
+        <img src="styles/images/profile/blart.jpg" />
+        <div>Bl'artagnan<br/><a href="https://www.youtube.com/@BlartDFFOO">YouTube Channel</a><br/> 4 Month Award!</div>
+    </div>
+      <div class="mySlides">
+        <img src="styles/images/profile/Ayman.jpg" />
+        <div>Ayman<br/><a href="https://www.youtube.com/@BlartDFFOO">YouTube Channel</a><br/>14 Years old</div>
+    </div>
+      <div class="mySlides">
+        <img src="styles/images/profile/Joesephyr.jpg" />
+        <div>Joesephyr<br/><a href="https://www.youtube.com/@BlartDFFOO">YouTube Channel</a><br/>Most Popular</div>
+    </div>
+      <div class="mySlides">
+        <img src="styles/images/profile/TreeVoid.jpg" />
+        <div>TreeVoid<br/><a href="https://www.youtube.com/@BlartDFFOO">YouTube Channel</a><br/> Master Degenerate</div>
+    </div>
+    </div>
+    <div>
+    <div class="wrapper">
+      <div id="about" class="headers">What is the MTV Challenge?</div>
+      <div>
+        <p>The Man to Void Challenge was originally created by Ayman to give the community extra content on the Global side of DFFOO
+        <br/><br/>
+        Now manned by TreeVoid, he issues a month long challenge where players must complete every Shinryu event with special restrictions
+        <br/><br/>
+        Restrictions such as: 
+        <br/>
+        <span class="restrictions">Banned Synergy</span><br/>
+        Any unit that has synergy or is featured on the banners associated with the stage is banned.<br/>
+        <span class="restrictions">Lockouts</span><br/>
+        You may only use a unit once during the whole month long challenge<br/>
+        <span class="restrictions">Limited Bans</span><br/>
+        Hand selected power houses are banned for the month. Some months you may select a number of these units to unban
+      </p>
+      </div>
+      <div class="headers">Current Challenge! <label id="lblmonth">January 2023</label></div>
+      <img id="mtvChallenge" src="styles/images/MTVChallengeJanuary.png">
+      <div>
+        <button id="submit" class="btnsubmit"onclick="onClickEvent('R')">Check Out the Runs</button>
+        <button class="btnsubmit"onclick="onClickEvent('E')">Submit your run now!</button>
+      </div>
+      <div class="headers" id="extra">DFFOO Ressources</div>
+      <div class="Extra">
+        <div>Character/Beginner Guides :<a href="https://www.tonberrytroupe.com/">The Tonberry Troupe</a></div>
+        <div>Event/Character Timeline : <a href="https://ffootip.com/forecast">Ffootip</a></div>
+        <div>FR Conditions : <a href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa1lFajAtUEJBVHJBNG1lQnc2ZnllUDI2WmhFQXxBQ3Jtc0tsdmJBWDVKMXpYU25qaG5LOFFKWkkyVUNMYVk5QXJxMkJmbTRWOExYbVZCWVJaOFBUdzB5d2pxcmVkS3hKeUtBUTd0NFdJLTBDZURTeHphenNtRGNvblZ0eHA3SzI3UkcxcW9yMDVPaHhkQ3VQMWh6SQ&q=https%3A%2F%2Fwww.dff.ooo%2F%3Fen%26v%3Dforce-time%26s%3D6%26o%3Da&v=pGWxeaxTuuw">DFFOO FR Chart</a></div>
+        <div>Account Tracker : <a href=" https://ootracker.com/characters">OOTracker</a></div>
+        <div>Dissidia Database</a></div>
+        <div>Call Finder : <a href="">Call Finder</a></div>
+      </div>
+      <div class="headers">DFFOO Shows</div>
+      <div class="calendar">
+        <div class="week tooltip"><div class="day">Monday</div><img  src="styles/images/LifeStreamLogo.png"><div><a href="https://www.twitch.tv/lifestreamdffoo">The LifeStream</a></div></div>
+        <div class="week tooltip"><div class="day">Tuesday</div><img class="border-radius:25px;"  src="styles/images/HCLogo.jpg"><a href="https://www.twitch.tv/thecrystalchronicles"></a><div><a href="https://www.twitch.tv/crossxiii">Historia Crux</a></div></div>
+        <div class="week tooltip"><div class="day">Wednesday</div><img  src="styles/images/EchoLogo.png"><div><a href="https://www.twitch.tv/thecrystalchronicles"></a><a href="https://www.youtube.com/@ScarElric1">Echoes from The Rift</a></div></div>
+        <div class="week tooltip"><div class="day">Thursday</div><img  src="styles/images/TCC Logo.jpg"><div><a href="https://www.twitch.tv/thecrystalchronicles">TCC Podcast</a></div></div>
+    </div> 
+    <div class="contact"><div>For any questions, please join the <a href="https://discord.gg/6mWaCDU3zj">TCC Discord</a> and message PoteauCedar#2142.</div><div>MTV and all associated with this website are not affiliated with Square Enix 
+      <br/>All Materials are the Property of Koei Tecmo Games & Square Enix Co., Ltd. 
+    
+  </div>
+</div>
+</div>
+
+</body>
+<script>
+  let theme = "light";
+// To Do
+//1->Make Participants slides work
+//2->Edit the banner on top, make PNG and add color
+//3->Add Dark Mode changed
+
+
+/*
+  let slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+*/
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+  function onClickEvent()
+  {
+    window.location.href = "event.html?" + theme;
+  }
+  function switchmode()
+  {
+    if(theme == "light")
+    {
+      theme = "dark"
+      document.documentElement.style.setProperty('--background','black');
+      console.log("dark mode")
+    }
+    else
+    {
+      theme = "light"
+      document.documentElement.style.setProperty('--background','white');   
+      console.log("light mode")
+    }
+  }
+/* This is for the smooth transitions on the menu*/
+let anchorlinks = document.querySelectorAll('a[href^="#"]')
+
+for (let item of anchorlinks) { // relitere 
+  item.addEventListener('click', (e)=> {
+  let hashval = item.getAttribute('href')
+  let target = document.querySelector(hashval)
+  target.scrollIntoView({
+    behavior: 'smooth'
+  })
+  history.pushState(null, null, hashval)
+  e.preventDefault()
+})
+}
+</script>

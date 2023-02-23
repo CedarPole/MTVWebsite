@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<link rel="script" href="scripts/event.js" />
+<link rel="stylesheet" href="styles/event.css" />
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  
+</head>
+<body>
+<div class="wrapper">
+  <form id="myForm">
+  MTV Submission Form!
+    <div class="stage1">
+    Please enter you're username and which stage you're submitting
+    <div>Username : <input name="Username" required="true" type="text" /></div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;Event : 
+        <select name="Events" id="ddEvents" onchange="revealStage()">
+          <option>Select your Event</option>
+        </select>
+      </div>
+    </div>
+
+
+
+<div id="stage2">
+  <div class="banned">Banned Units
+    <img class="imglock" src="styles/images/lock.png"/>
+    <div class="banportraits" id="banned">
+    </div>
+    <img class="imglock" src="styles/images/lock.png"/>
+  </div>
+  <div class="units">
+    <fieldset class="unit">
+      <legend>Unit 1</legend>
+      <div>
+        
+        <select onchange="updateForm(1)" name="Unit 1" id="ddUnit1"><option>Select Your Unit</option></select>
+        <select onchange="setUnits()" disabled="true" name="Call 1" id="ddCall1"><option>Select Your Call</option></select>
+        <div>BT Used? <input id="cBT1" disabled="true" name="BT 1" type="checkbox" /> FR Used? <input id="cFR1" disabled="true" name="FR 1" type="checkbox"></div>
+        <img id="imgunit1" src="styles/images/unit/Ace.png" />
+      </div>
+
+    </fieldset>
+    <fieldset class="unit">
+      <legend >Unit 2</legend>
+      <select onchange="updateForm(2)" name="Unit 2" id="ddUnit2"><option>Select Your Unit</option></select>
+      <select onchange="setUnits()"name="Call 2" disabled="true" id="ddCall2"><option>Select Your Call</option></select>
+      <div>BT Used? <input id="cBT2" disabled="true" type="checkbox" name="BT 2" /> FR Used? <input id="cFR2" name="FR 2" disabled="true" type="checkbox"></div>
+      <img id="imgunit2" src="styles/images/unit/Aerith.png"/>
+    </fieldset>
+    <fieldset class="unit">
+      <legend>Unit 3</legend>
+      <select onchange="updateForm(3)" name="Unit 3" id="ddUnit3"><option>Select Your Unit</option></select>
+      <select onchange="setUnits()" name="Call 3" disabled="true"  id="ddCall3"><option>Select Your Call</option></select>
+      <div>BT Used <input id="cBT3" type="checkbox" disabled="true" name="BT 3" /> FR Used? <input id="cFR3" name="FR 3" disabled="true" type="checkbox"></div>
+      <img id="imgunit3"/>
+    </fieldset>
+  </div>
+  <div class="turn">Turn Count <input name="Turn Count" type="text" /></div>
+  <div>Video Link <input name="Video Link" type="text" /></div>
+  <button onclick="SubForm()">Submit</button>
+</div>
+</div>
+
+  
+</div>
+</form>
+</div>
+</body>
