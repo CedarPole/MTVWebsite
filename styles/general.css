@@ -1,0 +1,298 @@
+:root
+{
+  --background: white;
+  --textcolor: black;
+  --maincolor: rgb(66, 105, 137);
+  --main2:rgb(66, 105, 137);
+  --varcolor:red;
+  --ExDeath:rgb(165, 238, 252);
+}
+
+body{
+  margin:0;
+  padding:0;
+  font-size: 3em;
+  text-align: center;
+}
+p{
+  font-size:0.6em;
+  margin:0 px 15px 15px;
+}
+
+.participants
+{
+  background-color: rgb(165, 238, 252);
+  padding: 25px 0 25px 0;
+}
+.participants a
+{
+  text-decoration: underline;
+}
+.participants img
+{
+  width: 300px;
+  border-radius: 100px;
+}
+.mySlides div
+{
+  float: right;
+  margin-right: 20%;
+}
+#mtvChallenge
+{
+  width: 100%;
+}
+
+.restrictions
+{
+  text-align: center;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.btnsubmit
+{
+  font-size: 0.7em;
+  width: 400px;
+  height: 100px;
+  border-radius: 10px;
+  padding:4px;
+  margin-bottom:15px;
+  box-shadow: #888686 2px 2px 3px;
+}
+.btnsubmit:hover
+{
+  /*background-color: red;*/
+  color:white;
+}
+
+
+/* Footer */
+.tooltiptext
+{
+  visibility: hidden;
+}
+.Extra
+{
+  font-size: 0.8em;
+}
+
+.calendar
+{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom:1px solid rgb(165, 238, 252);
+
+}
+.calendar a{
+  text-decoration: none;
+  
+}
+.calendar img{
+  width: 300px;
+  margin-bottom:50px;
+}
+
+.week
+{
+  font-size:0.5em;
+  position: relative;
+}
+.week:nth-of-type(1) ,.week:nth-of-type(4)
+{
+  background-color: rgb(165, 238, 252);
+}
+.week a{
+  position: absolute;
+  bottom:0;
+  left:23%;
+  font-size: 1.3em;
+  color:black;
+  
+}
+.day{
+  font-size: 1em;
+  color:black;
+  font-style: italic;
+  text-decoration: underline;
+}
+.contact
+{
+  text-align: center;
+ font-size: 0.8em;
+ font-style: italic;
+ margin:5px 30px 0 30px;
+}
+.contact div:nth-of-type(2)
+{
+  margin-top:5px;
+}
+@media(max-width: 500px){
+  p{
+    margin:10px 20px 10px 20px;
+  }
+.participants
+{
+  padding: 5px 0 5px 0;
+}
+.participants img{
+  width: 40px;
+  border-radius: 20px;
+}
+.slides div{
+  margin:0;
+}
+#mtvChallenge
+{
+  margin-left: 5%;
+  margin-right:5%;
+  width: 90%;
+}
+.btnsubmit
+{
+  width: 50px;
+  height: 25px;
+  font-size: 0.5em;
+}
+.Extra
+{
+  font-size:0.7em;
+}
+/* Tool Tip*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  }
+  .tooltip .tooltiptext , .tooltip .tooltiptexticon {
+    visibility: hidden;
+    width: 100px;
+    background-color: #888686;
+    color: #fff;
+    text-align: center;
+    padding: 4px;
+    border-radius: 6px;
+    border-bottom-left-radius:0;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    top:-40px;
+    left:10px;
+    font-size: 1em;
+  }
+  .tooltip:hover .tooltiptext , .tooltip:hover .tooltiptexticon {
+    visibility: visible;
+    }
+  .calendar
+  {
+  grid-template-columns: repeat(4, 1fr);
+  z-index: -500;
+  }
+  .calendar img{
+    width: 50px;
+    margin-bottom: 5px;
+  }
+  .calendar a{
+    font-size: 0.8em;
+  }
+  .week:nth-of-type(1) ,.week:nth-of-type(4)
+{
+  background-color: var(--background);
+}
+  .week:nth-of-type(1) ,.week:nth-of-type(3)
+{
+  background-color: rgb(165, 238, 252);
+}
+  .contact
+  {
+    font-size: 0.4em;
+  }
+}
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

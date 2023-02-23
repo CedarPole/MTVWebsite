@@ -1,0 +1,131 @@
+
+#mtvLogo{
+  width: 100%;
+}
+.headers
+{
+  background-color:rgb(66, 105, 137);
+  font-size: 1.2em;
+  color:white;
+  padding:10px;
+  position:sticky;
+  top:80px;
+}
+.nav
+{
+  background-color: var(--maincolor);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: sticky;
+  top:0;
+  width: 100%;
+  padding:15px 0 15px 0;
+  z-index: 5;
+}
+.nav label
+{
+  margin:auto;
+}
+.nav a
+{
+  font-size: 0.5em;
+  text-decoration: none;
+  color:white;
+  vertical-align: middle;
+}
+.nav div:hover
+{
+  background:rgb(66, 105, 137);
+}
+
+/* This is the CSS for the slider*/
+
+.nav input{
+  color: var(--textcolor);
+  background-color: var(--maincolor);
+  border:none;
+  height:0.2em;
+  width: 4.9em;
+  margin-top:0.8em;
+  margin-bottom:0.1em;
+
+  transition: ease-in 1s;
+  text-align: right;
+}
+.switch {
+  margin-top:2.5px;
+  position:relative;
+  width: 2.5em;
+  height: 1.2em;
+}
+
+.slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgb(165,165,165);
+  transition: .4s;
+  border-radius: 2em;
+}
+
+.switch input{
+  display: none;
+}
+.slider::before{
+  position: absolute;
+  content: "";
+  height: 0.9em;
+  width: 0.9em;
+  left: 15px;
+  bottom:7px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+input:checked + .slider
+{
+  background-color: rgb(56,100,161);
+}
+input:checked + .slider::before
+{
+  transform: translateX(50px);
+}
+/* This is the end of the slider*/
+
+@media(max-width: 500px)
+{
+  body{
+    font-size: 0.8em;
+  }
+  #mtvLogo{
+    width: 75%;
+    margin:auto;
+  }
+  .headers
+  {
+    font-size:1em;
+    padding:4px;
+    top:13px;
+  }
+  .nav
+  {padding:2px;}
+  .switch
+  {
+  width: 1.2em;
+  height: 0.6em;
+  }
+  .slider::before
+  {
+  height: 0.5em;
+  width: 0.5em;
+  left: 2px;
+  bottom:0.7px;
+  }
+  input:checked + .slider::before
+{
+  transform: translateX(5px);
+}
+}

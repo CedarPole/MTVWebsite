@@ -1,0 +1,158 @@
+:root
+{
+  --background: white;
+  --textcolor: black;
+  --maincolor: rgb(66, 105, 137);
+  --bannedcolor: linear-gradient(162deg, rgba(66,105,137,1) 47%, rgba(165,238,252,1) 100%);
+  --unitcolor:
+}
+
+body{
+  background-color:var(--background);
+  color:var(--textcolor);
+  margin:0;
+  padding:0;
+  font-size: 1.3em;
+}
+.wrapper
+{
+  margin:0 10px 0 10px;
+  text-align: center;
+}
+input
+{
+  border-radius: 15px;
+  padding:2px;
+  background-color: var(--maincolor);
+  color:var(--textcolor);
+}
+select {
+  width: 300px;
+  font-size: 1.3em;
+  color:var(--textcolor);
+  background-color: var(--maincolor);
+  border-color: var(--textcolor);
+}
+.stage1
+{
+  margin-top:10px;
+  background:var(--bannedcolor);
+  border: 0.5px solid var(--textcolor);
+  border-right:none;
+  border-left:none;
+  padding:30px 10px 30px 10px;
+}
+.stage1 input{
+  width: 300px;
+  margin-bottom: 10px;
+  margin-top:10px;
+  font-size: 1em;
+  padding-left: 10px;
+}
+#stage2
+{
+  visibility: hidden;
+  padding:30px 10px 30px 10px;
+
+}
+.banned
+{
+  background: var(--bannedcolor);
+  text-align: center;
+  border-radius: 40px;
+  color:var(--textcolor);
+}
+.banportraits img{
+  width: 4em;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  float: none;
+}
+.unit
+{
+  position:relative;
+  border:1px solid var(--textcolor);
+  background: var(--bannedcolor);
+  text-align: left;
+  height: 200px;
+  margin-top:10px;
+  padding-top: 40px;
+  z-index: 5;
+}
+.unit select
+{
+  margin-bottom:10px;
+}
+.unit div
+{
+  margin-left:2px;
+}
+.unit img
+{
+  position: absolute;
+  top:0;
+  left:0;
+  right:1px;
+  bottom:0;
+  width: 95%;
+  opacity: 0.6;
+  overflow: hidden;
+  z-index: -1;
+}
+.turn
+{
+  margin-top:10px;
+}
+@media(max-width: 500px){
+
+  body{
+    font-size: 0.4em;
+  }
+  input{
+    width: 150px;
+    font-size: 0.8em;
+  }
+  .stage1
+  {
+   padding:5px 0 5px 0;
+  }
+  .stage1 input{
+  width: 50px;
+  border:solid black 0.5px;
+  }
+  select{
+    width: 100px;
+    font-size: 0.8em;
+  }
+  .banned img{
+    width: 20px;
+  }
+  .units
+  {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: 0.2em;
+  }
+  .unit{
+    text-align: center;
+    height: 100px;
+    padding-top: 5px;
+  }
+  .unit select{
+    width: 70px;
+  }
+  .unit input{
+    width: 5px;
+  }
+  .turn{
+    margin-top: 5px;
+    font-size: 0.6em;
+  }
+  .turn input{
+    width: 40px;
+  }
+  button{
+    font-size: 0.5em;
+    margin-top: 5px;
+  }
+}

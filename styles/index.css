@@ -1,0 +1,303 @@
+:root
+{
+  --background: white;
+  --textcolor: black;
+  --maincolor: rgb(66, 105, 137);
+  --main2:rgb(66, 105, 137);
+  --varcolor:red;
+  --ExDeath:rgb(165, 238, 252);
+}
+
+body{
+  margin:0;
+  padding:0;
+  font-size: 3em;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;}
+p{
+  font-size:0.6em;margin:0 px 15px 15px;
+}
+  
+.background{
+  background-color: var(--background);
+  opacity: 0.5;
+  float:right;
+}
+
+
+/* Header */
+#mtvLogo{
+  width: 100%;
+}
+.title
+{
+  background-color: var(--maincolor);
+  color:white;
+  padding:20px 0 20px 0;
+}
+.nav
+{
+  background-color: var(--maincolor);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: sticky;
+  top:0;
+  width: 100%;
+  padding:15px 0 15px 0;
+  z-index: 5;
+}
+.nav label
+{
+  margin:auto;
+}
+.nav a
+{
+  font-size: 0.5em;
+  text-decoration: none;
+  color:white;
+  vertical-align: middle;
+}
+.nav div:hover
+{
+  background:rgb(66, 105, 137);
+}
+
+/* This is the CSS for the slider*/
+
+.nav input{
+  color: var(--textcolor);
+  background-color: var(--maincolor);
+  border:none;
+  font-size: 3em;
+  height:0.2em;
+  width: 4.9em;
+  margin-top:0.8em;
+  margin-bottom:0.1em;
+
+  transition: ease-in 1s;
+  text-align: right;
+}
+.switch {
+  margin-top:2.5px;
+  position:relative;
+  width: 2.5em;
+  height: 1.2em;
+}
+
+.slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgb(165,165,165);
+  transition: .4s;
+  border-radius: 2em;
+}
+
+.switch input{
+  display: none;
+}
+.slider::before{
+  position: absolute;
+  content: "";
+  height: 0.9em;
+  width: 0.9em;
+  left: 15px;
+  bottom:7px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+input:checked + .slider
+{
+  background-color: rgb(56,100,161);
+}
+input:checked + .slider::before
+{
+  transform: translateX(50px);
+}
+/* This is the end of the slider*/
+
+
+.participants
+{
+  background-color: rgb(165, 238, 252);
+  padding: 25px 0 25px 0;
+}
+.participants a
+{
+  text-decoration: underline;
+}
+.participants img
+{
+  width: 250px;
+  border-radius: 150px;
+  margin-left:100px;
+}
+.slides
+{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 0.8em;
+  text-align: left;
+}
+#mtvChallenge
+{
+  width: 100%;
+}
+
+.restrictions
+{
+  text-align: center;
+  text-decoration: underline;
+  font-style: italic;
+}
+.headers
+{
+  background-color:rgb(66, 105, 137);
+  font-size: 1.2em;
+  color:white;
+  padding:10px;
+}
+.btnsubmit
+{
+  font-size: 0.7em;
+  width: 400px;
+  height: 100px;
+  border-radius: 10px;
+  padding:4px;
+  margin-bottom:15px;
+  box-shadow: #888686 2px 2px 3px;
+}
+.btnsubmit:hover
+{
+  /*background-color: red;*/
+  color:white;
+}
+
+
+/* Footer */
+.tooltiptext
+{
+  visibility: hidden;
+}
+.Extra
+{
+  font-size: 0.8em;
+}
+
+.calendar
+{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+.calendar a{
+  text-decoration: none;
+  
+}
+.calendar img{
+  width: 300px;
+  margin-bottom:50px;
+}
+
+.week
+{
+  font-size:0.5em;
+  position: relative;
+}
+.week:nth-of-type(1) ,.week:nth-of-type(4)
+{
+  background-color: gray;
+}
+.week a{
+  position: absolute;
+  bottom:0;
+  left:23%;
+  font-size: 1.3em;
+  color:black;
+  
+}
+.day{
+  font-size: 1em;
+  color:black;
+  font-style: italic;
+  text-decoration: underline;
+}
+.contact
+{
+  text-align: center;
+ font-size: 0.8em;
+ font-style: italic;
+ margin:5px 30px 0 30px;
+}
+.contact div:nth-of-type(2)
+{
+  margin-top:5px;
+}
+
+@media only screen and (min-width: 1000px) {
+body{
+  font-size: 2em;
+}
+.wrapper
+{
+  margin:50px;
+}
+.title
+{
+  font-size: 2em;
+}
+.nav
+{
+  height: 30px;
+}
+.slider::before{
+left:10px;
+bottom:4px;
+}
+input:checked + .slider::before
+{
+  transform: translateX(35px);
+}
+
+.participants
+{
+  font-size: 1.2em;
+}
+
+/* Tool Tip*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  }
+  .tooltip .tooltiptext , .tooltip .tooltiptexticon {
+    visibility: hidden;
+    width: 100px;
+    background-color: #888686;
+    color: #fff;
+    text-align: center;
+    padding: 4px;
+    border-radius: 6px;
+    border-bottom-left-radius:0;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    top:-40px;
+    left:10px;
+    font-size: 1em;
+  }
+  .tooltip:hover .tooltiptext , .tooltip:hover .tooltiptexticon {
+    visibility: visible;
+    }
+  .calendar
+  {
+    
+  grid-template-columns: repeat(4, 1fr);
+  }
+}
